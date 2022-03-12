@@ -1,0 +1,61 @@
+#
+# Site settings
+#
+remote_theme: LeakyAbstractions/pretty-docs
+url: https://dhealthproject.github.io
+baseurl: /
+title: &site_title dHealth Network
+description: &site_description Public Blockchain Framework for Healthcare
+branding:
+  icon:
+    image: /assets/images/dhealth-logo-blue.png
+  highlight: dHealth
+  bold: Network
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+  parse_block_html: true
+
+#
+# Owner
+#
+owner:
+  name: dHealth Network
+  twitter: &site_owner_twitter dHealth_Network
+  copyright:
+    notice: Copyright
+    author: "[dHealth Network](https://dhealth.network/)"
+
+# Google Analytics
+google_analytics: 
+
+#
+# Collections
+#
+collections:
+  doc:
+    output: true
+    permalink: /:path.html
+
+#
+# Default values
+#
+defaults:
+  -
+    scope:
+      path: ""
+      type: doc
+    values:
+      layout: doc
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: doc
